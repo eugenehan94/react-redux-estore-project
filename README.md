@@ -1,3 +1,8 @@
+# React Redux Estore Project
+
+GitHub page link: https://eugenehan94.github.io/react-redux-estore-project/#/
+
+---------------------------------------------------------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
