@@ -18,6 +18,9 @@ const Products = () => {
   const { open } = products.toggleNavbar;
   const dispatch = useDispatch();
 
+  // Descending and ascending controlled by using console.log below
+  // console.log(productFiltered.sort((a, b) => b.price - a.price));
+
   //function to remove any duplicate category
   // const newArray = (product) => {
   //   let array = ["All"];
@@ -115,7 +118,7 @@ const Products = () => {
                       <img src={item.image} alt={item.title} />
                     </Link>
                     <p>{item.title}</p>
-                    <p id="products-item-price">${item.price}</p>
+                    <p id="products-item-price">${item.price.toFixed(2)}</p>
                   </div>
                 );
               })}

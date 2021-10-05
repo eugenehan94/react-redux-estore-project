@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import shoppingBags from "../images/ShoppingBags.jpg";
-import { LoremIpsum } from "react-lorem-ipsum";
+
 import { Link } from "react-router-dom";
 const Hero = () => {
   return (
@@ -9,7 +9,10 @@ const Hero = () => {
       <div className="ecommerce-left-wrapper">
         <h1>Buy Till Your Heart's Content</h1>
         <div className="ecommerce-left-wrapper-desc">
-          <LoremIpsum avgWordsPerSentence={8} avgSentencesPerParagraph={4} />
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Euismod primis
+          pretium condimentum nisi nullam. Montes ligula nulla aenean primis
+          parturient congue at netus hac. Donec lacus praesent pharetra dolor ut
+          praesent tempus.
         </div>
         <Link to="/products">
           <button>SHOP NOW</button>

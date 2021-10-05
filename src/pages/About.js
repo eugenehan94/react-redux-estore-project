@@ -1,5 +1,4 @@
 import React from "react";
-import { LoremIpsum } from "react-lorem-ipsum";
 import Navbar from "../components/Navbar";
 import NavbarSmaller from "../components/NavbarSmaller";
 import Footer from "../components/Footer";
@@ -17,7 +16,16 @@ const About = () => {
         <img src={eCommerceImage} alt="E Commerce Image" />
         <div>
           <h1>About us</h1>
-          <LoremIpsum avgWordsPerSentence={10} avgSentencesPerParagraph={8} />
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Nisl morbi
+          ridiculus dolor sagittis orci phasellus senectus sociosqu mollis.
+          Luctus tempus tempus commodo; tincidunt dui maximus pellentesque.
+          Quisque vivamus tempus potenti ornare sem tellus massa, vestibulum
+          sed. Conubia neque est at mattis laoreet rutrum himenaeos ornare
+          parturient. Dapibus ipsum inceptos nullam ultrices urna facilisis
+          fames hac iaculis maximus. Habitant arcu ridiculus mus; mattis natoque
+          vel dictumst sed. Egestas sapien sagittis diam lectus velit tempor
+          mauris nisl. Tellus nisi ultrices sit nullam ut nostra maecenas
+          magnis. Adipiscing phasellus ex est mattis duis ac facilisis sodales.
         </div>
       </div>
       <Footer />

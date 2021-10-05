@@ -37,7 +37,7 @@ const FeaturedProducts = () => {
                 </Link>
                 <p>{item.title}</p>
 
-                <p>${item.price}</p>
+                <p>${item.price.toFixed(2)}</p>
               </div>
             );
           })}

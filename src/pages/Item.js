@@ -51,7 +51,7 @@ const Item = () => {
           </div>
           <div className="item-display-right-wrapper">
             <h1>{item.title}</h1>
-            <h3>${item.price}</h3>
+            <h3>${item.price.toFixed(2)}</h3>
             <p>{item.description}</p>
           </div>
         </div>
