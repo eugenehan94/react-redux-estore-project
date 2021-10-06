@@ -393,7 +393,7 @@
   .products-item {
     width: 100%;
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 400px) {
     .products-item {
       display: flex;
       flex-direction: column;

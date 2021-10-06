@@ -184,7 +184,11 @@ const Products = () => {
                 return (
                   <div key={id} className="products-item">
                     <Link to={`/products/${item.id}`}>
-                      <img src={item.image} alt={item.title} />
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        style={{ padding: "0", margin: "0" }}
+                      />
                     </Link>
                     <p>{item.title}</p>
                     <p id="products-item-price">${item.price.toFixed(2)}</p>
