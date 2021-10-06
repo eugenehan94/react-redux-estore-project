@@ -18,6 +18,7 @@ const FeaturedProducts = () => {
       console.log(error);
     }
   };
+
   useEffect(() => {
     fetchProduct();
   }, []);

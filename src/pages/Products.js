@@ -6,6 +6,12 @@ import {
   filterProducts,
   selectedCategory,
 } from "../redux/actions/productAction";
+import {
+  ascending,
+  descending,
+  alphabetical,
+  reverseAlphabetical,
+} from "../redux/actions/sortAction";
 import Navbar from "../components/Navbar";
 import NavbarSmaller from "../components/NavbarSmaller";
 import Footer from "../components/Footer";
@@ -15,9 +21,39 @@ const Products = () => {
   const products = useSelector((state) => state);
 
   const { loading, category, productFiltered, selected } = products.allProduct;
-  const { open } = products.toggleNavbar;
+  const { sort } = products.sort;
+  console.log(productFiltered);
   const dispatch = useDispatch();
 
+  if (sort === "price-lowest") {
+    productFiltered.sort((a, b) => a.price - b.price);
+  } else if (sort === "price-highest") {
+    productFiltered.sort((a, b) => b.price - a.price);
+  } else if (sort === "name-a-z") {
+    productFiltered.sort((a, b) => {
+      let titleA = a.title.toUpperCase();
+      let titleB = b.title.toUpperCase();
+      if (titleA < titleB) {
+        return -1;
+      }
+      if (titleA > titleB) {
+        return 1;
+      }
+      return 0;
+    });
+  } else {
+    productFiltered.sort((a, b) => {
+      let titleA = a.title.toUpperCase();
+      let titleB = b.title.toUpperCase();
+      if (titleA > titleB) {
+        return -1;
+      }
+      if (titleA < titleB) {
+        return 1;
+      }
+      return 0;
+    });
+  }
   // Descending and ascending controlled by using console.log below
   // console.log(productFiltered.sort((a, b) => b.price - a.price));
 
@@ -67,6 +103,19 @@ const Products = () => {
     dispatch(selectedCategory(item));
   };
 
+  const sortHandler = (choice) => {
+    if (choice === "price-lowest") {
+      dispatch(ascending());
+      return;
+    } else if (choice === "price-highest") {
+      dispatch(descending());
+    } else if (choice === "name-a-z") {
+      dispatch(alphabetical());
+    } else {
+      dispatch(reverseAlphabetical());
+    }
+  };
+
   return (
     <div>
       <NavbarSmaller />
@@ -110,6 +159,26 @@ const Products = () => {
           <Loading />
         ) : (
           <div>
+            <div className="products-sort-wrapper">
+              <div>
+                <p>{productFiltered.length} Products Found</p>
+              </div>
+
+              <div>
+                <form>
+                  <label>Sort By </label>
+                  <select
+                    value={sort}
+                    onChange={(e) => sortHandler(e.target.value)}
+                  >
+                    <option value="price-lowest">Price (Lowest) </option>
+                    <option value="price-highest">Price (Highest)</option>
+                    <option value="name-a-z">Name (A-Z)</option>
+                    <option value="name-z-a">Name (Z-A)</option>
+                  </select>
+                </form>
+              </div>
+            </div>
             <div className="products-item-wrapper">
               {productFiltered.map((item, id) => {
                 return (

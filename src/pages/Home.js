@@ -5,11 +5,11 @@ import Hero from "../components/Hero";
 import FeaturedProducts from "../components/FeaturedProducts";
 import EmailSubscription from "../components/EmailSubscription";
 import Footer from "../components/Footer";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const Home = () => {
-  const navState = useSelector((state) => state);
-  const { open } = navState.toggleNavbar;
+  // const navState = useSelector((state) => state);
+  // const { open } = navState.toggleNavbar;
 
   return (
     <div>

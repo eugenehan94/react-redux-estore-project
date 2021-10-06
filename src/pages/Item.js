@@ -15,8 +15,8 @@ const Item = () => {
   const singleItem = useSelector((state) => state);
   const dispatch = useDispatch();
   const { item, loading } = singleItem.oneItem;
-  const { open } = singleItem.toggleNavbar;
-  console.log("Item Fetched", item);
+  // const { open } = singleItem.toggleNavbar;
+
   const fetchSingleItem = async () => {
     try {
       const response = await fetch(
@@ -36,7 +36,7 @@ const Item = () => {
       dispatch(clearSingleProduct());
     };
   }, [itemId]);
-  console.log("True/False: ", loading);
+
   return (
     <div>
       <NavbarSmaller />
