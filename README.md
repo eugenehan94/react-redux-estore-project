@@ -3,11 +3,11 @@
 GitHub page link: https://eugenehan94.github.io/react-redux-estore-project/#/
 
 
-# Home Page Demo
+## Home Page Demo
 ![ECommerceHomePage](https://user-images.githubusercontent.com/59939048/140630946-48160077-026f-4318-b8e4-ed7b5052fab2.gif)
 
 
-# Browse Product Demo
+## Browse Product Demo
 ![ECommerceBrowseProducts](https://user-images.githubusercontent.com/59939048/140630956-ba29df6b-6d85-4617-8375-9e302e791cb8.gif)
 
 
